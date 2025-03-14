@@ -74,7 +74,7 @@ export default function useGameLogic() {
     if (!isGameStarted || isGameOver || isFrozen) return;
     if (fuel <= 0) return;
     setBalloonBottom((p) => p + jumpHeight);
-    setFuel((p) => Math.max(0, p - 8));
+    setFuel((p) => Math.max(0, p - 6));
   };
 
   const startGame = () => {

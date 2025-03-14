@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders bird down 1`] = `
+<View
+  style={
+    {
+      "bottom": 100,
+      "height": 40,
+      "left": 50,
+      "position": "absolute",
+      "width": 40,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "testUri": "../../../assets/images/BirdDown.png",
+      }
+    }
+    style={
+      {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`renders bird up 1`] = `
+<View
+  style={
+    {
+      "bottom": 100,
+      "height": 40,
+      "left": 50,
+      "position": "absolute",
+      "width": 40,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "testUri": "../../../assets/images/BirdUp.png",
+      }
+    }
+    style={
+      {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;

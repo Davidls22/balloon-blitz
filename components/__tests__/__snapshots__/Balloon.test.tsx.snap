@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders balloon 1`] = `
+<View
+  style={
+    {
+      "bottom": 100,
+      "height": 60,
+      "left": 50,
+      "position": "absolute",
+      "width": 60,
+    }
+  }
+>
+  <Image
+    resizeMode="contain"
+    source={
+      {
+        "testUri": "../../../assets/images/hotairballoon.png",
+      }
+    }
+    style={
+      {
+        "height": "100%",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;

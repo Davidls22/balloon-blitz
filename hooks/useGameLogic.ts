@@ -204,7 +204,7 @@ export default function useGameLogic() {
       setIsFrozen(true);
       const t = setTimeout(() => {
         setIsFrozen(false);
-        setFuel(50);
+        setFuel(30);
       }, 2000);
       return () => clearTimeout(t);
     }
@@ -228,6 +228,32 @@ export default function useGameLogic() {
       if (birdFlapTimer.current) clearInterval(birdFlapTimer.current);
     };
   }, []);
+
+  const [currentBuildingSpeed, setCurrentBuildingSpeed] = useState(buildingSpeed);
+  const [currentBirdSpeed, setCurrentBirdSpeed] = useState(birdSpeed);
+
+  useEffect(() => {
+    if (!isGameStarted) return;
+    const speedOffset = Math.floor(score / 10); 
+    const newBuildingSpeed = buildingSpeed + speedOffset;
+    const newBirdSpeed = birdSpeed + speedOffset;
+
+    if (currentBuildingSpeed !== newBuildingSpeed && buildingTimer.current) {
+      setCurrentBuildingSpeed(newBuildingSpeed);
+      clearInterval(buildingTimer.current);
+      buildingTimer.current = setInterval(() => {
+        setBuildingLeft((p) => p - newBuildingSpeed);
+      }, 30);
+    }
+
+    if (currentBirdSpeed !== newBirdSpeed && birdTimer.current) {
+      setCurrentBirdSpeed(newBirdSpeed);
+      clearInterval(birdTimer.current);
+      birdTimer.current = setInterval(() => {
+        setBirdLeft((p) => p - newBirdSpeed);
+      }, 30);
+    }
+  }, [score, isGameStarted]);
 
   return {
     balloonBottom,

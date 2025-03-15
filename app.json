@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "bundleIdentifier": "com.yourcompany.balloonblitz",
+      "bundleIdentifier": "com.davidls22.balloonblitz",
       "supportsTablet": true,
       "buildNumber": "1.0.0"
     },
